@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KINETICA — Physical Intelligence & Embedded Mechatronics</title>
+  <meta name="description" content="An editorial monograph and atelier showcasing next-generation robotics, custom neuromorphic micro-electronics, and biomimetic harmonic actuation.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       Top Editorial Metadata Bar
+       ========================================================================== -->
+  <aside class="editorial-topbar" aria-label="Editorial status and metadata">
+    <div class="container">
+      <div class="topbar-meta-item">
+        <span class="status-dot"></span>
+        <span>LABORATORY STATUS: ACTIVE // AUTONOMOUS RUNTIME 99.98%</span>
+      </div>
+      <div class="topbar-meta-item">
+        <span>VOL. 26 — ED. Q3 2026</span>
+        <span>•</span>
+        <span>ZÜRICH / TOKYO / SAN FRANCISCO</span>
+        <span>•</span>
+        <span id="utc-clock">UTC 00:00:00</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       Primary Navigation Header
+       ========================================================================== -->
+  <header class="site-header" id="site-header">
+    <div class="container nav-container">
+      <a href="#hero" class="brand-mark" aria-label="Kinetica Mechatronics Atelier">
+        <span class="brand-title">KINETICA</span>
+        <span class="brand-sub">PHYSICAL INTELLIGENCE ATELIER</span>
+      </a>
+
+      <nav class="nav-menu" id="nav-menu" aria-label="Main Navigation">
+        <a href="#hero" class="nav-link active"><span>01</span>Overview</a>
+        <a href="#about" class="nav-link"><span>02</span>Manifesto</a>
+        <a href="#features" class="nav-link"><span>03</span>Architecture</a>
+        <a href="#connect" class="nav-link"><span>04</span>Dispatch</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Theme Switcher (Dark Obsidian / Fine Paper) -->
+        <button type="button" class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle editorial paper/dark theme" title="Switch Theme">
+          <svg id="theme-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <a href="#connect" class="cta-header-btn">Initiate Dispatch</a>
+
+        <!-- Mobile Navigation Trigger -->
+        <button type="button" class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Open mobile menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================================================
+         01. HERO SECTION
+         ========================================================================== -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="editorial-stamp">
+            MONOGRAPH N° 08 // PHYSICAL EMBODIMENT
+          </div>
+
+          <h1 class="hero-headline">
+            Where Silicon <br>
+            Achieves <em>Kinetic</em> <br>
+            Form.
+          </h1>
+
+          <p class="hero-lead">
+            We engineer high-density neuromorphic electronics and biomimetic robotic actuators. Merging architectural precision with biological compliance to author machines that coexist with the natural world.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#features" class="btn-primary">
+              <span>Explore Blueprints</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </a>
+            <a href="#about" class="btn-secondary">
+              <span>Read Manifesto</span>
+            </a>
+          </div>
+
+          <div class="hero-telemetry-row">
+            <div class="telemetry-item">
+              <span class="telemetry-label">REFLEX LATENCY</span>
+              <span class="telemetry-val">0.18ms</span>
+              <span class="telemetry-sub">Deterministic bus loop</span>
+            </div>
+            <div class="telemetry-item">
+              <span class="telemetry-label">TORQUE DENSITY</span>
+              <span class="telemetry-val">44.2 Nm/kg</span>
+              <span class="telemetry-sub">Planetary harmonic drive</span>
+            </div>
+            <div class="telemetry-item">
+              <span class="telemetry-label">SUBSTRATE DIE</span>
+              <span class="telemetry-val">MOD-14</span>
+              <span class="telemetry-sub">Low-power RISC-V edge</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual Frame with Interactive Actuator Hotspots -->
+        <div class="hero-visual-frame" id="hero-frame">
+          <span class="frame-corner-plus frame-tl">+</span>
+          <span class="frame-corner-plus frame-tr">+</span>
+          <span class="frame-corner-plus frame-bl">+</span>
+          <span class="frame-corner-plus frame-br">+</span>
+
+          <div class="hero-img-container">
+            <img src="assets/images/hero-actuator.jpg" alt="Minimalist carbon fiber and titanium robotic hand actuator on architectural plinth" id="hero-main-img">
+
+            <!-- Interactive Hotspot 1: Carbon Tendons -->
+            <div class="hotspot hotspot-1" data-hotspot="tendons" style="top: 38%; left: 45%;">
+              <div class="hotspot-pulse"></div>
+              <div class="hotspot-dot"></div>
+              <div class="hotspot-card">
+                <span class="hotspot-tag">FIG 1.1 // TENDON DRIVE</span>
+                <h4>Polymer-Braided Flex Cables</h4>
+                <p>High-tensile Dyneema tendons transferring torque with zero backlash and biomimetic elasticity.</p>
+              </div>
+            </div>
+
+            <!-- Interactive Hotspot 2: Micro-Harmonic Joint -->
+            <div class="hotspot hotspot-2" data-hotspot="joint" style="top: 60%; left: 74%;">
+              <div class="hotspot-pulse"></div>
+              <div class="hotspot-dot"></div>
+              <div class="hotspot-card">
+                <span class="hotspot-tag">FIG 1.2 // ROTARY APERTURE</span>
+                <h4>Titanium 3D-Printed Knuckles</h4>
+                <p>Selective Laser Sintered (SLS) Grade 5 titanium housing dual high-resolution optical encoders.</p>
+              </div>
+            </div>
+
+            <!-- Interactive Hotspot 3: Brushless Stator Base -->
+            <div class="hotspot hotspot-3" data-hotspot="stator" style="top: 44%; left: 23%;">
+              <div class="hotspot-pulse"></div>
+              <div class="hotspot-dot"></div>
+              <div class="hotspot-card">
+                <span class="hotspot-tag">FIG 1.3 // CORE STATOR</span>
+                <h4>Neodymium Axial-Flux Motor</h4>
+                <p>Precision brushless pancake armature delivering 14.8 Nm instantaneous stall torque.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="frame-footer-caption">
+            <span>FIGURE 01 — MULTI-AXIS KINEMATIC END-EFFECTOR</span>
+            <span>SPEC: <strong>SERIES 08-PROTOTYPE</strong></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         TICKER / RUNNING TELEMETRY BAR
+         ========================================================================== -->
+    <div class="editorial-ticker-wrap" aria-hidden="true">
+      <div class="editorial-ticker">
+        <div class="ticker-entry"><span class="dot">✦</span> NEURAL LATENCY: 0.18 MS</div>
+        <div class="ticker-entry"><span class="dot">✦</span> SUB-MICRON RESOLUTION: 0.05 μm</div>
+        <div class="ticker-entry"><span class="dot">✦</span> TORQUE DENSITY: 44.2 NM/KG</div>
+        <div class="ticker-entry"><span class="dot">✦</span> COMPUTE: RISC-V 48 TOPS DEDICATED NPU</div>
+        <div class="ticker-entry"><span class="dot">✦</span> BUS PROTOCOL: SUB-MICROSECOND ETHERCAT</div>
+        <div class="ticker-entry"><span class="dot">✦</span> MATERIAL MATRIX: GRADE 5 TITANIUM & T1000 CARBON</div>
+        <!-- Duplicate for seamless continuous scroll -->
+        <div class="ticker-entry"><span class="dot">✦</span> NEURAL LATENCY: 0.18 MS</div>
+        <div class="ticker-entry"><span class="dot">✦</span> SUB-MICRON RESOLUTION: 0.05 μm</div>
+        <div class="ticker-entry"><span class="dot">✦</span> TORQUE DENSITY: 44.2 NM/KG</div>
+        <div class="ticker-entry"><span class="dot">✦</span> COMPUTE: RISC-V 48 TOPS DEDICATED NPU</div>
+        <div class="ticker-entry"><span class="dot">✦</span> BUS PROTOCOL: SUB-MICROSECOND ETHERCAT</div>
+        <div class="ticker-entry"><span class="dot">✦</span> MATERIAL MATRIX: GRADE 5 TITANIUM & T1000 CARBON</div>
+      </div>
+    </div>
+
+    <!-- ==========================================================================
+         02. ABOUT SECTION (THE MANIFESTO & SYSTEM ANATOMY)
+         ========================================================================== -->
+    <section class="about-section" id="about">
+      <div class="container">
+        <div class="about-header-spread">
+          <span class="section-number">SECTION 02 // MANIFESTO</span>
+          <h2 class="section-title">The Poetics of Kinetic Logic</h2>
+          <p class="section-subtitle">
+            Departing from industrial brutalism to author physical machines as coherent biological analogs—where silicon pathways mirror nervous systems.
+          </p>
+        </div>
+
+        <div class="about-editorial-grid">
+          <!-- Manifesto Left Column -->
+          <article class="manifesto-column">
+            <p class="lead-paragraph">
+              Conventional robotics has long operated under a cold, compartmentalized paradigm: mechanical engineers sculpt brute linkages, while software theorists deploy code in isolation. We reject this dichotomy.
+            </p>
+
+            <p class="editorial-body-text">
+              At Kinetica, mechatronics is treated as an indivisible craft. The physical substrate, the gold traces etched onto substrate layers, and the high-speed brushless field orientation are designed simultaneously as a living, unified organism. Every micron of metal serves computational equilibrium.
+            </p>
+
+            <div class="pull-quote">
+              <blockquote>
+                “A machine should not merely calculate work; it should execute motion with the quiet composure of natural law.”
+              </blockquote>
+              <div class="quote-author">
+                Dr. Alistair Vance // Fellow of Mechatronic Cybernetics
+              </div>
+            </div>
+
+            <p class="editorial-body-text">
+              Our hardware laboratories in Zürich and Tokyo synthesize aerospace-grade alloys, custom RISC-V edge silicon, and fluid-damped joint dynamics. By placing neuromorphic compute directly at the sensor boundary, we achieve reflex times that mimic organic muscle fibers.
+            </p>
+          </article>
+
+          <!-- System Anatomy Right Column (Interactive Diagnostic Viewer) -->
+          <div class="anatomy-column">
+            <div class="anatomy-header">
+              <div class="anatomy-title-block">
+                <span class="editorial-stamp">SYSTEM DIAGNOSTIC</span>
+                <h3>Circuit Substrate Anatomy</h3>
+              </div>
+              <span class="mono" style="font-size: 0.68rem; color: var(--accent-gold);">MOD-14 / DIE REV B</span>
+            </div>
+
+            <div class="anatomy-media-box">
+              <img src="assets/images/electronics-core.jpg" alt="Macro detail of crafted logic MOD-14 microchip and precision electronic PCB traces" id="anatomy-img">
+              <div class="diagnostic-overlay" id="diagnostic-badge">
+                LAYER: NEURAL COMPUTATION (ACTIVE)
+              </div>
+            </div>
+
+            <!-- Interactive Anatomy Tabs -->
+            <div class="anatomy-nav-tabs" role="tablist">
+              <button class="tab-btn active" data-tab="tab-neural" role="tab" aria-selected="true">01. Neural Edge</button>
+              <button class="tab-btn" data-tab="tab-power" role="tab" aria-selected="false">02. Power Rail</button>
+              <button class="tab-btn" data-tab="tab-harmonic" role="tab" aria-selected="false">03. Signal Bus</button>
+            </div>
+
+            <!-- Tab Pane 1: Neural Edge -->
+            <div class="tab-pane active" id="tab-neural" role="tabpanel">
+              <p class="pane-caption">
+                Custom neuromorphic RISC-V die bonded to an insulated ceramic carrier. Executes vision and balance heuristics directly at the limb root with zero round-trip telemetry lag.
+              </p>
+              <div class="pane-specs-grid">
+                <div class="pane-spec-cell">
+                  <span class="spec-cell-label">EDGE INFERENCE</span>
+                  <span class="spec-cell-val">48.4 TOPS</span>
+                </div>
+                <div class="pane-spec-cell">
+                  <span class="spec-cell-label">THERMAL DISSIPATION</span>
+                  <span class="spec-cell-val">3.8 Watts (Nominal)</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tab Pane 2: Power Rail -->
+            <div class="tab-pane" id="tab-power" role="tabpanel">
+              <p class="pane-caption">
+                GaN (Gallium Nitride) switching regulators running at 2.4 MHz. Delivers ultra-low ripple voltage to sensitive inertial measurement units and high-current motor drivers without magnetic interference.
+              </p>
+              <div class="pane-specs-grid">
+                <div class="pane-spec-cell">
+                  <span class="spec-cell-label">INPUT ENVELOPE</span>
+                  <span class="spec-cell-val">18V - 60V DC</span>
+                </div>
+                <div class="pane-spec-cell">
+                  <span class="spec-cell-label">PEAK EFFICIENCY</span>
+                  <span class="spec-cell-val">97.8% GaN Stage</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tab Pane 3: Signal Bus -->
+            <div class="tab-pane" id="tab-harmonic" role="tabpanel">
+              <p class="pane-caption">
+                Differential impedance-matched gold waveguides routing high-speed serializer data. Sub-nanosecond phase alignment ensures synchronized motion across all 18 independent joint servos.
+              </p>
+              <div class="pane-specs-grid">
+                <div class="pane-spec-cell">
+                  <span class="spec-cell-label">BUS BANDWIDTH</span>
+                  <span class="spec-cell-val">10.0 Gbps SERDES</span>
+                </div>
+                <div class="pane-spec-cell">
+                  <span class="spec-cell-label">CLOCK JITTER</span>
+                  <span class="spec-cell-val">&lt; 120 Femtosec</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         03. FEATURES SECTION (ARCHITECTURE & PORTFOLIO)
+         ========================================================================== -->
+    <section class="features-section" id="features">
+      <div class="container">
+        <div class="features-header-spread">
+          <div>
+            <span class="section-number">SECTION 03 // ARCHITECTURE</span>
+            <h2 class="section-title">Hardware Capabilities & Modules</h2>
+            <p class="section-subtitle">
+              Engineered for extreme reliability under environmental stress. Four foundational technologies powering our autonomous physical platforms.
+            </p>
+          </div>
+
+          <div class="features-filter-bar" aria-label="Feature categories">
+            <button class="filter-btn active" data-filter="all">All Modules</button>
+            <button class="filter-btn" data-filter="compute">Compute & Silicon</button>
+            <button class="filter-btn" data-filter="kinetics">Kinematics</button>
+          </div>
+        </div>
+
+        <!-- 4 Monograph Cards Grid -->
+        <div class="features-grid">
+          <!-- Monograph 01 -->
+          <article class="feature-monograph-card" data-category="compute">
+            <div>
+              <div class="card-top-meta">
+                <span class="card-index">[01]</span>
+                <span class="card-badge">SILICON HARDWARE</span>
+              </div>
+              <h3 class="card-title">Neuromorphic Compute Core</h3>
+              <p class="card-desc">
+                High-density custom packaging pairing eight 64-bit RISC-V cores with a dedicated tensor accelerator. Capable of real-time point-cloud registration and state estimation on an energy budget smaller than an LED bulb.
+              </p>
+              <div class="card-specs-list">
+                <div class="card-spec-row">
+                  <span>ARCHITECTURE</span>
+                  <span>RV64GCX + Vector 1.0</span>
+                </div>
+                <div class="card-spec-row">
+                  <span>PACKAGING</span>
+                  <span>Multi-Chip Module (MCM)</span>
+                </div>
+                <div class="card-spec-row">
+                  <span>MEMORY INTERFACE</span>
+                  <span>LPDDR5 Quad-Channel</span>
+                </div>
+              </div>
+            </div>
+            <button type="button" class="card-action-btn" data-modal="modal-compute">
+              <span>Inspect Schematic Specs</span>
+              <span class="arrow">→</span>
+            </button>
+          </article>
+
+          <!-- Monograph 02 -->
+          <article class="feature-monograph-card" data-category="kinetics">
+            <div>
+              <div class="card-top-meta">
+                <span class="card-index">[02]</span>
+                <span class="card-badge">ACTUATION</span>
+              </div>
+              <h3 class="card-title">Biomimetic Harmonic Drives</h3>
+              <p class="card-desc">
+                Zero-backlash strain wave gearing combined with high-torque brushless stators. Integrated elastic series torque transducers sense micro-Newton surface resistance within 150 microseconds.
+              </p>
+              <div class="card-specs-list">
+                <div class="card-spec-row">
+                  <span>BACKLASH TOLERANCE</span>
+                  <span>&lt; 0.00 Arcmin</span>
+                </div>
+                <div class="card-spec-row">
+                  <span>TORQUE RESOLUTION</span>
+                  <span>0.002 Nm</span>
+                </div>
+                <div class="card-spec-row">
+                  <span>HOUSING ALLOY</span>
+                  <span>Titanium Grade 5 (Ti-6Al-4V)</span>
+                </div>
+              </div>
+            </div>
+            <button type="button" class="card-action-btn" data-modal="modal-harmonic">
+              <span>Inspect Schematic Specs</span>
+              <span class="arrow">→</span>
+            </button>
+          </article>
+
+          <!-- Monograph 03 -->
+          <article class="feature-monograph-card" data-category="kinetics">
+            <div>
+              <div class="card-top-meta">
+                <span class="card-index">[03]</span>
+                <span class="card-badge">EMBEDDED RTOS</span>
+              </div>
+              <h3 class="card-title">Deterministic Micro-Kernel</h3>
+              <p class="card-desc">
+                Hard-real-time firmware verified with mathematical formal methods. Guarantees zero priority inversions and uninterrupted safety reflex loops even during high-bandwidth telemetry dispatches.
+              </p>
+              <div class="card-specs-list">
+                <div class="card-spec-row">
+                  <span>CYCLE LATENCY</span>
+                  <span>250 μs Deterministic</span>
+                </div>
+                <div class="card-spec-row">
+                  <span>FORMAL VERIFICATION</span>
+                  <span>ISO 26262 ASIL-D</span>
+                </div>
+                <div class="card-spec-row">
+                  <span>RECOVERY TIME</span>
+                  <span>&lt; 10 Microseconds</span>
+                </div>
+              </div>
+            </div>
+            <button type="button" class="card-action-btn" data-modal="modal-rtos">
+              <span>Inspect Schematic Specs</span>
+              <span class="arrow">→</span>
+            </button>
+          </article>
+
+          <!-- Monograph 04 -->
+          <article class="feature-monograph-card" data-category="compute">
+            <div>
+              <div class="card-top-meta">
+                <span class="card-index">[04]</span>
+                <span class="card-badge">SENSORY SUITE</span>
+              </div>
+              <h3 class="card-title">Ultra-Wideband Sensory Bus</h3>
+              <p class="card-desc">
+                High-speed serialized interconnect linking sub-terahertz radar transceivers, 6-axis tactile skin arrays, and solid-state LiDAR units into a coherent spatial matrix.
+              </p>
+              <div class="card-specs-list">
+                <div class="card-spec-row">
+                  <span>SAMPLING RATE</span>
+                  <span>40 kHz Multi-Channel</span>
+                </div>
+                <div class="card-spec-row">
+                  <span>TACTILE SPATIAL DENSITY</span>
+                  <span>64 Nodes / cm²</span>
+                </div>
+                <div class="card-spec-row">
+                  <span>EMI SHIELDING</span>
+                  <span>-110 dB Mu-Metal Enclosure</span>
+                </div>
+              </div>
+            </div>
+            <button type="button" class="card-action-btn" data-modal="modal-sensor">
+              <span>Inspect Schematic Specs</span>
+              <span class="arrow">→</span>
+            </button>
+          </article>
+        </div>
+
+        <!-- Sensor Module Spotlight Monograph with Generated High-Precision Sensor Image -->
+        <div class="sensor-spotlight-monograph">
+          <div class="spotlight-image-wrap">
+            <img src="assets/images/sensor-node.jpg" alt="Model RS-730 multi-sensor robotics optical lens cluster and solid-state LiDAR module with matte anodized finish">
+          </div>
+          <div class="spotlight-content">
+            <div class="editorial-stamp">HARDWARE MONOGRAPH // RS-730 SENSOR NODE</div>
+            <h3>Integrated Solid-State LiDAR & Telecentric Optics</h3>
+            <p>
+              Constructed from CNC-machined aerospace alloy and sapphire crystal elements. The RS-730 unifies 100-meter flash LiDAR, 24-70mm precision telecentric vision, and active structured-light depth sensing into a single sealed IP68 module.
+            </p>
+            <div class="hero-actions" style="margin-bottom: 0;">
+              <button type="button" class="btn-primary" data-modal="modal-sensor">
+                <span>View Full Optical Telemetry</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         04. CONNECT SECTION (THE EDITORIAL DISPATCH)
+         ========================================================================== -->
+    <section class="connect-section" id="connect">
+      <div class="container">
+        <div class="connect-grid">
+          <!-- Information Column -->
+          <div class="connect-info">
+            <span class="section-number">SECTION 04 // COMMUNIQUÉ</span>
+            <h2 class="section-title">Initiate Direct Dialogue</h2>
+            <p class="connect-lead-text">
+              We welcome dialogue with robotics laboratories, industrial research consortia, academic institutions, and bespoke mechatronic commissioning partners worldwide.
+            </p>
+
+            <div class="connect-details-stack">
+              <div>
+                <div class="detail-block-title">PHYSICAL ATELIER</div>
+                <div class="detail-block-value">
+                  Kinetica Mechatronics Laboratory<br>
+                  Atelier 04, 14 Rue de la Cybernétique<br>
+                  CH-8005 Zürich, Switzerland
+                </div>
+              </div>
+
+              <div>
+                <div class="detail-block-title">DIRECT TELECOMMUNICATION</div>
+                <div class="detail-block-value mono-val">
+                  dispatch@kinetica-atelier.io<br>
+                  +41 (0) 44 892 1400
+                </div>
+              </div>
+
+              <div>
+                <div class="detail-block-title">PGP SECURITY KEY</div>
+                <div class="detail-block-value mono-val">
+                  9B42 8E10 44CD FA31 00E2 899F 331C 7A04
+                </div>
+              </div>
+
+              <div>
+                <div class="detail-block-title">ENGAGEMENT CALENDAR</div>
+                <div class="detail-block-value">
+                  Currently scheduling bespoke hardware commissions for Q4 2026.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Editorial Form Column -->
+          <div class="dispatch-form-card">
+            <div class="form-header-bar">
+              <div>
+                <span class="editorial-stamp">DISPATCH PROTOCOL</span>
+                <h3>Transmit Research Inquiry</h3>
+              </div>
+              <span class="mono" style="font-size: 0.65rem; color: var(--accent-gold);">ENCRYPTED SHA-256</span>
+            </div>
+
+            <form id="dispatch-form" novalidate>
+              <div class="form-group-row">
+                <div class="form-group">
+                  <label for="inquirer-name">
+                    <span>[01] INQUIRER FULL NAME</span>
+                    <span class="req">*</span>
+                  </label>
+                  <input type="text" id="inquirer-name" name="name" class="form-control" placeholder="e.g. Dr. Elena Moreau" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="inquirer-org">
+                    <span>[02] INSTITUTION / LAB</span>
+                    <span class="req">*</span>
+                  </label>
+                  <input type="text" id="inquirer-org" name="organization" class="form-control" placeholder="e.g. Max Planck Institute" required>
+                </div>
+              </div>
+
+              <div class="form-group-row">
+                <div class="form-group">
+                  <label for="inquirer-email">
+                    <span>[03] ELECTRONIC ADDRESS</span>
+                    <span class="req">*</span>
+                  </label>
+                  <input type="email" id="inquirer-email" name="email" class="form-control" placeholder="moreau@institution.org" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="inquiry-domain">
+                    <span>[04] DOMAIN OF INQUIRY</span>
+                    <span class="req">*</span>
+                  </label>
+                  <select id="inquiry-domain" name="domain" class="form-control" required>
+                    <option value="" disabled selected>Select Mechatronic Domain...</option>
+                    <option value="kinetics">Biomimetic Actuator End-Effectors</option>
+                    <option value="silicon">Custom RISC-V Neural Substrates</option>
+                    <option value="sensory">Solid-State LiDAR & Sensor Arrays</option>
+                    <option value="bespoke">Turnkey Autonomous Hardware Commission</option>
+                    <option value="academic">Academic & Research Fellowship</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group" style="margin-bottom: 2rem;">
+                <label for="inquiry-message">
+                  <span>[05] PARAMETERS & RESEARCH SCOPE</span>
+                  <span class="req">*</span>
+                </label>
+                <textarea id="inquiry-message" name="message" class="form-control" placeholder="Outline specific mechanical constraints, torque-envelope requirements, or architectural objectives..." required></textarea>
+              </div>
+
+              <div class="form-footer-action">
+                <div class="form-status-msg" id="form-status">
+                  <span class="status-dot"></span>
+                  <span id="status-text">SYSTEM READY // PACKET UNSEALED</span>
+                </div>
+
+                <button type="submit" class="btn-submit" id="btn-submit-inquiry">
+                  <span>Seal & Dispatch</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                  </svg>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER / EDITORIAL COLOPHON
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-brand">
+          <h4>KINETICA</h4>
+          <p>
+            An independent research atelier dedicated to the union of poetic design, custom micro-electronics, and sub-millimeter kinetic autonomy.
+          </p>
+          <div class="mono" style="font-size: 0.72rem; color: var(--accent-gold);">
+            ZÜRICH • TOKYO • SAN FRANCISCO
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h5>Index</h5>
+          <ul>
+            <li><a href="#hero">01. Overview</a></li>
+            <li><a href="#about">02. Manifesto</a></li>
+            <li><a href="#features">03. Architecture</a></li>
+            <li><a href="#connect">04. Dispatch</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h5>Monographs</h5>
+          <ul>
+            <li><a href="#features">MOD-14 Silicon Die</a></li>
+            <li><a href="#features">Harmonic Tendon Series</a></li>
+            <li><a href="#features">RS-730 Optical LiDAR</a></li>
+            <li><a href="#about">Deterministic RTOS</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h5>Colophon</h5>
+          <ul>
+            <li><span class="mono" style="font-size: 0.8rem; color: var(--text-muted);">TYPESETTING:</span></li>
+            <li><span style="font-size: 0.82rem; color: var(--text-secondary);">Cormorant Garamond</span></li>
+            <li><span style="font-size: 0.82rem; color: var(--text-secondary);">Plus Jakarta Sans</span></li>
+            <li><span style="font-size: 0.82rem; color: var(--text-secondary);">Space Mono</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div>
+          © 2026 KINETICA RESEARCH ATELIER. ALL SPECIFICATIONS SUBJECT TO MATHEMATICAL AUDIT.
+        </div>
+        <div>
+          <button type="button" class="back-to-top-btn" id="back-to-top">
+            <span>RETURN TO SUMMIT</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="19" x2="12" y2="5"></line>
+              <polyline points="5 12 12 5 19 12"></polyline>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       HARDWARE BLUEPRINT MODAL (SPEC INSPECTOR)
+       ========================================================================== -->
+  <div class="spec-modal-backdrop" id="spec-modal" aria-hidden="true" role="dialog" aria-labelledby="modal-title">
+    <div class="spec-modal-container">
+      <button type="button" class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <div class="modal-header">
+        <div class="editorial-stamp" id="modal-tag">SCHEMATIC BLUEPRINT // AUDIT 08</div>
+        <h3 id="modal-title">Neuromorphic Compute Core</h3>
+      </div>
+
+      <div class="modal-content-grid">
+        <div>
+          <p id="modal-desc" style="font-size: 0.95rem; line-height: 1.7; color: var(--text-secondary); margin-bottom: 1.5rem; font-weight: 300;">
+            Detailed architectural breakdown and structural tolerances under mechanical vibration and thermal saturation.
+          </p>
+          <div class="mono" style="font-size: 0.72rem; color: var(--accent-gold); padding: 0.8rem; background: var(--bg-secondary); border-left: 2px solid var(--accent-gold);" id="modal-quote">
+            “Sub-microsecond deterministic response across 18 articulated degrees of freedom.”
+          </div>
+        </div>
+
+        <div>
+          <table class="modal-spec-table">
+            <tbody id="modal-specs-body">
+              <!-- Dynamically populated via JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div style="display: flex; justify-content: flex-end; padding-top: 1.5rem; border-top: 1px solid var(--border-subtle);">
+        <a href="#connect" class="btn-primary" id="modal-inquire-btn" style="padding: 0.8rem 1.6rem;">
+          <span>Inquire About Integration</span>
+          <span class="arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Editorial Toast Notification -->
+  <div class="editorial-toast" id="editorial-toast" role="alert" aria-live="assertive">
+    <div class="toast-icon"></div>
+    <div class="toast-text" id="toast-message">PACKET TRANSMITTED // ACKNOWLEDGED BY ZÜRICH NODE</div>
+  </div>
+
+  <!-- JavaScript Modules -->
+  <script src="js/main.js"></script>
+</body>
+</html>
